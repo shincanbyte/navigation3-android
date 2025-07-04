@@ -1,4 +1,4 @@
-package com.shincanbyte.auth.screen
+package com.shincanbyte.navigation3.auth.screen
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

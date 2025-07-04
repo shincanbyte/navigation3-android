@@ -1,4 +1,4 @@
-package com.shincanbyte.auth
+package com.shincanbyte.navigation3.core
 
 import org.junit.Test
 

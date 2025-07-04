@@ -1,4 +1,4 @@
-package com.shincanbyte.auth.route
+package com.shincanbyte.navigation3.auth.route
 
 import androidx.navigation3.runtime.NavKey
 
