@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
@@ -42,6 +43,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.bundles.nav3)
     implementation(libs.bundles.koin)
+
+    // Project
+    implementation(projects.core)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
