@@ -1,7 +1,6 @@
 package com.shincanbyte.navigation3.auth.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entry
@@ -15,11 +14,13 @@ import com.shincanbyte.navigation3.auth.screen.SignInScreen
 import com.shincanbyte.navigation3.auth.screen.SignUpScreen
 
 @Composable
-fun NavigationAuth() {
-
+fun NavigationAuth(
+    modifier: Modifier = Modifier
+) {
     val backStack = rememberNavBackStack<AuthRoute>(AuthRoute.SignIn)
 
     NavDisplay(
+        modifier = modifier,
         backStack = backStack,
         onBack = {backStack.removeLastOrNull()},
         entryDecorators = listOf(

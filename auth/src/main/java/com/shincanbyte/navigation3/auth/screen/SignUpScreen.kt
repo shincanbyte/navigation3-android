@@ -7,12 +7,14 @@ import com.shincanbyte.navigation3.core.ui.BasicTextScreen
 
 @Composable
 fun SignUpScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNextClick : () -> Unit
 ) {
     val name = AuthRoute.SignUp::class.simpleName
 
     BasicTextScreen(
         modifier = modifier,
-        text = name
+        text = name,
+        onClick = onNextClick
     )
 }

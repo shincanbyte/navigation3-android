@@ -1,4 +1,4 @@
-package com.shincanbyte.navigation3.ui.theme
+package com.shincanbyte.navigation3.core.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
