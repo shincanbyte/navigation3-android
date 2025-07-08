@@ -29,13 +29,28 @@ fun NavigationAuth(
         ),
         entryProvider = entryProvider {
             entry<AuthRoute.SignIn> {
-               SignInScreen()
+               SignInScreen(
+                   onSignUpClick = {
+
+                   },
+                   onForgotPasswordClick = {
+
+                   }
+               )
             }
             entry<AuthRoute.SignUp> {
-                SignUpScreen()
+                SignUpScreen(
+                    onSignUpClick = {
+
+                    }
+                )
             }
             entry<AuthRoute.ForgotPassword> {
-                ForgotPasswordScreen()
+                ForgotPasswordScreen(
+                    onNewPasswordRequest = {
+
+                    }
+                )
             }
         }
     )

@@ -11,12 +11,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.shincanbyte.navigation3.core.ui.theme.Navigation3Theme
+import com.shincanbyte.navigation3.core.ui.utils.ButtonProperties
 
 @Composable
 fun BasicTextScreen(
     modifier: Modifier = Modifier,
     text: String? = null,
-    onClick: (() -> Unit)? = null
+    primaryButton : ButtonProperties? = null,
+    secondaryButton : ButtonProperties? = null,
 ) {
     Box(
         modifier = modifier
@@ -28,11 +30,19 @@ fun BasicTextScreen(
             Text(text = it)
         }
 
-        onClick?.let{
+        primaryButton?.let{
             Button(
-                onClick = onClick
+                onClick = it.onClick ?: {}
             ){
-                Text(text = "Next")
+                Text(text = it.text)
+            }
+        }
+
+        secondaryButton?.let{
+            Button(
+                onClick = it.onClick ?: {}
+            ){
+                Text(text = it.text)
             }
         }
     }
